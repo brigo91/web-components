@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Web components</title>
 	<script src="tooltip.js"></script>
+	<script src="confirm-link.js"></script>
 	<style>
 		div {
 			border: 2px solid orange;
@@ -17,5 +18,7 @@
 	</template>
 	<p><uc-tooltip text="Web components is a set of standards.">Web components</uc-tooltip> are awesome!</p>
 	<uc-tooltip></uc-tooltip>
+	<div>This does not get the web component styles!</div>
+	<a is="uc-confirm-link" href="https://google.com">Google</a>
 </body>
 </html>
