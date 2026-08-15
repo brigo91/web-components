@@ -10,13 +10,19 @@
 		div {
 			border: 2px solid orange;
 		}
+
+		.highlight {
+			background-color: #f7d28e;
+		}
 	</style>
 </head>
 <body>
 	<template id="tooltip-template">
 		<slot>Some default</slot><span> (?)</span>
 	</template>
-	<p><uc-tooltip text="Web components is a set of standards.">Web components</uc-tooltip> are awesome!</p>
+	<p><uc-tooltip text="Web components is a set of standards.">
+		<span class="highlight">Web components</span>
+	</uc-tooltip> are awesome!</p>
 	<uc-tooltip></uc-tooltip>
 	<div>This does not get the web component styles!</div>
 	<a is="uc-confirm-link" href="https://google.com">Google</a>
