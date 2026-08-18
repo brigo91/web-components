@@ -7,6 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UcSideDrawer {
+        /**
+          * @default ''
+         */
+        "title": string;
     }
 }
 declare global {
@@ -22,9 +26,18 @@ declare global {
 }
 declare namespace LocalJSX {
     interface UcSideDrawer {
+        /**
+          * @default ''
+         */
+        "title"?: string;
     }
+
+    interface UcSideDrawerAttributes {
+        "title": string;
+    }
+
     interface IntrinsicElements {
-        "uc-side-drawer": UcSideDrawer;
+        "uc-side-drawer": Omit<UcSideDrawer, keyof UcSideDrawerAttributes> & { [K in keyof UcSideDrawer & keyof UcSideDrawerAttributes]?: UcSideDrawer[K] } & { [K in keyof UcSideDrawer & keyof UcSideDrawerAttributes as `attr:${K}`]?: UcSideDrawerAttributes[K] } & { [K in keyof UcSideDrawer & keyof UcSideDrawerAttributes as `prop:${K}`]?: UcSideDrawer[K] };
     }
 }
 export { LocalJSX as JSX };
