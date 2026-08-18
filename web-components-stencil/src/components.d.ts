@@ -11,10 +11,6 @@ export namespace Components {
           * @default ''
          */
         "my_title": string;
-        /**
-          * @default false
-         */
-        "opened": boolean;
     }
 }
 declare global {
@@ -34,15 +30,10 @@ declare namespace LocalJSX {
           * @default ''
          */
         "my_title"?: string;
-        /**
-          * @default false
-         */
-        "opened"?: boolean;
     }
 
     interface UcSideDrawerAttributes {
         "my_title": string;
-        "opened": boolean;
     }
 
     interface IntrinsicElements {

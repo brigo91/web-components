@@ -7,10 +7,10 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class SideDrawer {
   @Prop({reflect: true}) my_title: string = '';
-  @Prop({reflect: true}) opened: boolean = false;
+  // @Prop({reflect: true}) opened: boolean = false;
   render() {
     let content = null;
-    if (this.opened) {
+    // if (this.opened) {
       content = (
         <aside>
           <header><h1>{this.my_title}</h1></header>
@@ -19,7 +19,7 @@ export class SideDrawer {
           </main>
         </aside>
       );
-    }
+    // }
     return (
       content
     );
