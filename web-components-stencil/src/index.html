@@ -29,6 +29,7 @@
     <script nomodule src="/build/web-components-stencil.js"></script>
   </head>
   <body>
+    <button id="side-drawer-btn">Open Side Menu</button>
     <uc-side-drawer my_title="Main Menu">
       <nav class="side-nav">
         <ul>
@@ -40,7 +41,13 @@
     </uc-side-drawer>
 
     <script>
+      const sideDrawerBtn = document.querySelector('#side-drawer-btn');
       const sideDrawer = document.querySelector('uc-side-drawer');
+      sideDrawerBtn.addEventListener('click', () => {
+        if (!sideDrawer.opened) {
+          sideDrawer.opened = true;
+        }
+      });
       setTimeout(() => {
         // sideDrawer.title = 'It changed!';
         // sideDrawer.setAttribute('title', 'It changed via Attribute');
