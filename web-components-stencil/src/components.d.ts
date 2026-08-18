@@ -10,7 +10,7 @@ export namespace Components {
         /**
           * @default ''
          */
-        "title": string;
+        "my_title": string;
     }
 }
 declare global {
@@ -29,11 +29,11 @@ declare namespace LocalJSX {
         /**
           * @default ''
          */
-        "title"?: string;
+        "my_title"?: string;
     }
 
     interface UcSideDrawerAttributes {
-        "title": string;
+        "my_title": string;
     }
 
     interface IntrinsicElements {

@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
+    <script type="module" src="/build/web-components-stencil.esm.js"></script>
     <title>Stencil Component Starter</title>
     <style>
       body {
@@ -25,10 +26,10 @@
         color: black;
       }
     </style>
-    <script src="/build/mycomponent.js"></script>
+    <script nomodule src="/build/web-components-stencil.js"></script>
   </head>
   <body>
-    <uc-side-drawer title="Main Menu">
+    <uc-side-drawer my_title="Main Menu">
       <nav class="side-nav">
         <ul>
           <li><a href="/">A Link</a></li>
